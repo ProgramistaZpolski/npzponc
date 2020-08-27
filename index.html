@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!--
+        Copyleft 2020 ProgramistaZpolski
+        Użyte biblioteki:
+        MattJS
+        pzplBootstrap
+
+        Music provided by Kevin MacLeod
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nie potrafisz zrobić prostej ortografii na czas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/Matt.js"></script>
+    <!-- <script src = "js/Vanilla.js"></script>  Wejdż w ten plik aby zobaczyć 10 linijek rantu o starych przeglądarkach  -->
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="hideThisTrash">
+        <h1 style="font-size: 40px;">Nie potrafisz zrobić prostej ortografii na czas</h1>
+        <button onclick="startGame();" class="btn btn-primary">Start</button>
+    </div>
+    <div id="game">
+        <h1 id="sltxt" style="font-size: 50px;">Pchnąć w tę łódź jeża lub ośm skrzyń fig <br><br> (Jeśli widzisz ten
+            tekst to oznacza że gra się dalej ładuje)</h1>
+        <button id="opcja1" class="btn btn-primary" onclick="acceptResults(1)">Visual Studio Code</button>
+        <button id="opcja2" class="btn btn-primary" onclick="acceptResults(2)">Keyboard shortcuts for Linux</button>
+        <h4 id = "pytankoId">{pytanie} Pytanie, {poziom} Poziom</h4>
+        <progress id="countdown" value="0" max="100"> </progress>
+    </div>
+    <div id="failGame" style="display: none">
+        <h1>Przegrałeś!</h1>
+        <button class="btn btn-danger" onclick="retryGame();">Spróbuj ponownie</button>
+        <p>
+            Muzyka: Sovereign by Kevin MacLeod<br>
+            Link: https://incompetech.filmmusic.io/song/4397-sovereign<br>
+            License: http://creativecommons.org/licenses/by/4.0/
+        </p>
+        <audio hidden id="loseGameAudio" loop>
+            <source src="sound/lost_vorbis.ogg" type="audio/ogg">
+            <source src="sound/lost.mp3" type="audio/mpeg">
+            Zaaktualizuj przeglądarkę aby włączyć dźwięk
+        </audio>
+    </div>
+    <div id="hideThisTrash2">
+        <p>Muzyka: Beauty Flow by Kevin MacLeod<br>
+            Link: https://incompetech.filmmusic.io/song/5025-beauty-flow<br>
+            License: http://creativecommons.org/licenses/by/4.0/</p>
+        <audio hidden id="gameAudio" loop>
+            <source src="sound/game1_vorbis.ogg" type="audio/ogg">
+            <source src="sound/game1.mp3" type="audio/mpeg">
+            Zaaktualizuj przeglądarkę aby włączyć dźwięk
+        </audio>
+        Strona działa najlepiej w mozilla firefox
+    </div>
+</body>
+
+</html>
